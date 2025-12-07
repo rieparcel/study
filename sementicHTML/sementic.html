@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .style {
+        background-color: #fadcd9;
+        border-radius: 10px;
+      }
+      html {
+        background-color: #f9f1f0;
+      }
+      figure {
+        margin: 0;
+      }
+    </style>
+    <title>Sementic</title>
+  </head>
+  <body>
+    <header
+      class="style"
+      style="
+        height: 40px;
+        display: flex;
+        margin: 30px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+      "
+    >
+      <span>JULIA HUANG</span>
+      <nav><span>PROJECTS | ABOUT | CONTACT</span></nav>
+    </header>
+    <main style="display: flex; margin: 30px">
+      <section
+        style="
+          width: 55vw;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background-color: #f9f1f0;
+        "
+      >
+        <section
+          style="
+            height: 300px;
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+            background-color: #f9f1f0;
+          "
+        >
+          <article style="width: 60%" class="style">
+            Artist Redefining Architecture with AI-Driven Design
+          </article>
+          <!-- 혹은 img 태그 -->
+          <figure class="style" style="width: 40%; margin-right: 10px">
+            IMG
+          </figure>
+        </section>
+        <section
+          style="
+            display: flex;
+            gap: 10px;
+            height: 250px;
+            background-color: #f9f1f0;
+          "
+        >
+          <article style="width: 45%" class="style">
+            Julia Huang us on innovative AI artist, renowned for blending
+            cutting-edge technology with creative expression. Based in LA, she
+            crafts unique digital art experiences accessible globally.
+          </article>
+          <aside style="width: 55%; margin-right: 10px" class="style">
+            <span>Have some questions?</span>
+            <span>Contact me</span>
+          </aside>
+        </section>
+      </section>
+      <aside
+        style="
+          width: 35vw;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          background-color: #f9f1f0;
+        "
+      >
+        <section
+          class="style"
+          style="
+            height: 450px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          "
+        >
+          <article>
+            <span>Musea</span>
+            <figure style="height: 150px; margin-top: 15px">IMG</figure>
+          </article>
+          <span>Elara</span>
+          <span>Verve</span>
+          <span>Zephyr</span>
+        </section>
+        <!-- 혹은 footer로 작성해도 될 것 같음. -->
+        <nav
+          class="style"
+          style="display: flex; flex-direction: row; gap: 10px; padding: 20px"
+        >
+          <span>INSTAGRAM</span><br />
+          <span>TWITTER</span><br />
+          <span>LINKDIN</span>
+        </nav>
+      </aside>
+    </main>
+  </body>
+</html>
