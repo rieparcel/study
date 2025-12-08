@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      section {
+        border: 2px solid black;
+        margin-bottom: 20px;
+      }
+    </style>
+    <title>box 20 pieces</title>
+  </head>
+  <body>
+    <section style="width: 200px">
+      <h2>box-model</h2>
+      <div style="background-color: yellow">normal content</div>
+      <div
+        style="
+          margin: 10px;
+          border: 5px solid red;
+          padding: 8px;
+          background-color: yellow;
+        "
+      >
+        box model
+      </div>
+    </section>
+    <section>
+      <h2>box-sizing</h2>
+      <div
+        style="
+          width: 200px;
+          padding: 10px;
+          background-color: gray;
+          background-clip: content-box;
+          border: 10px solid red;
+          box-sizing: border-box;
+        "
+      >
+        border-box
+      </div>
+      <div
+        style="
+          width: 200px;
+          padding: 10px;
+          background-color: gray;
+          background-clip: content-box;
+          border: 5px solid red;
+          box-sizing: content-box;
+        "
+      >
+        content-box
+      </div>
+    </section>
+    <section>
+      <h2>마진 상쇄 margin-collapsing</h2>
+      <div
+        style="
+          width: 200px;
+          height: 50px;
+          background-color: yellow;
+          margin-bottom: 30px;
+        "
+      >
+        margin-bottom: 30px
+      </div>
+      <div
+        style="
+          width: 200px;
+          height: 50px;
+          background-color: yellow;
+          margin-top: 50px;
+        "
+      >
+        border-top: 50px
+      </div>
+    </section>
+  </body>
+</html>
