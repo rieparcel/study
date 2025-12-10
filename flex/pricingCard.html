@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Card</title>
+  </head>
+  <body>
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+      }
+      .container .card:nth-child(2) {
+        flex: 0 0 10%;
+        height: 180px;
+        background-color: #e3e3e3;
+      }
+      .card {
+        background-color: #f0f0f0;
+        padding: 16px;
+        border-radius: 16px;
+        height: 160px;
+      }
+    </style>
+    <h1>Pricing Card Example</h1>
+    <main>
+      <section class="container">
+        <div class="card">
+          <h2>Free</h2>
+          <h3>$0</h3>
+        </div>
+        <div class="card">
+          <h2>Plus</h2>
+          <h3>$199</h3>
+        </div>
+        <div class="card">
+          <h2>Pro</h2>
+          <h3>$399</h3>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
