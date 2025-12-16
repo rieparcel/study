@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모바일 우선 레이아웃</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 16px;
+      }
+      .card {
+        position: relative;
+        width: 80vw;
+        height: 200px;
+        background-color: lightgray;
+        border-radius: 12px;
+        padding: 16px;
+      }
+
+      .card > p {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .viewport::after {
+        content: "모바일";
+      }
+
+      @media (min-width: 600px) {
+        .viewport::after {
+          content: "태블릿";
+        }
+      }
+
+      @media (min-width: 901px) {
+        .viewport::after {
+          content: "데스크탑";
+        }
+      }
+    </style>
+    <h1>모바일 우선 레이아웃 예제</h1>
+    <p>현재 사이즈는 <span class="viewport"></span>입니다.</p>
+    <style>
+      @media (min-width: 600px) {
+        .container {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .card {
+          width: calc(50% - 8px);
+        }
+      }
+      @media (min-width: 901px) {
+        .card {
+          width: calc(33.333% - 11px);
+        }
+      }
+    </style>
+    <section class="container">
+      <div class="card"><p>카드 1</p></div>
+      <div class="card"><p>카드 2</p></div>
+      <div class="card"><p>카드 3</p></div>
+      <div class="card"><p>카드 4</p></div>
+      <div class="card"><p>카드 5</p></div>
+      <div class="card"><p>카드 6</p></div>
+    </section>
+  </body>
+</html>
