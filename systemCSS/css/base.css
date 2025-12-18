@@ -1,4 +1,10 @@
 :root {
     --color-gray: lightgray;
-    --color-text: green;
+    --color-text: #333;
+
+    --space-sm: 8px;
+    --space-md: 16px;
+
+    --font-sm: 16px;
+    --font-md: 24px;
 }

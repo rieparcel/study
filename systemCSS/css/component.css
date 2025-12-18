@@ -1,5 +1,14 @@
 .card {
     background-color: var(--color-gray);
     color: var(--color-text);
-    padding: 16px;
+    padding: var(--space-md);
+}
+
+.card-title {
+    font-size: var(--font-md);
+    margin-bottom: var(--space-sm);
+}
+
+.card-desc{
+    font-size: var(--font-sm);
 }
