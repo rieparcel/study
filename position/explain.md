@@ -1,4 +1,5 @@
-# 개인 학습 - stacking context 실험
+# 개인 학습 - 레이아웃 동작 여부 실험
 
 ## 설명
 - z-index가 동작하는 구조, 동작하지 않는 구조를 만들어 비교
+- 부모 요소의 transform로 인한 fixed 깨짐 구현

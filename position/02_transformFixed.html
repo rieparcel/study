@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform + fixed 구현</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      .wrapper {
+        transform: translateX(0);
+        border: 5px solid black;
+      }
+
+      .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+      }
+
+      .content {
+        height: 150vh;
+        padding: 80px 20px;
+      }
+    </style>
+
+    <div class="wrapper">
+      <div class="fixed">Header</div>
+      <div class="content">
+        wrapper에서 transform 속성을 해제하면 header가 정상적으로 동작
+      </div>
+    </div>
+  </body>
+</html>
