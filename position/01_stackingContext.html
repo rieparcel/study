@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>z-index 비교</title>
+  </head>
+  <body>
+    <style>
+      .container {
+        position: relative;
+        width: 300px;
+        height: 200px;
+      }
+
+      .container div {
+        width: 150px;
+        height: 150px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      /* z-index 높은 값에도 반응하지 않음 */
+      .box-static {
+        background: tomato;
+        z-index: 999;
+      }
+
+      /* 정상 동작 */
+      .box-relative {
+        position: relative;
+        background: steelblue;
+        margin-top: -100px;
+        margin-left: 80px;
+        z-index: 1;
+      }
+    </style>
+    <div class="container">
+      <div class="box-static">
+        static + z-index <br />
+        (z-index 999)
+      </div>
+      <div class="box-relative">
+        relative + z-index <br />
+        (z-index 1)
+      </div>
+    </div>
+  </body>
+</html>
