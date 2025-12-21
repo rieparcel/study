@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sticky 동작 비교</title>
+  </head>
+  <body>
+    <style>
+      h2 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      section {
+        margin-bottom: 120px;
+        border: 2px solid black;
+        background: white;
+      }
+
+      .spacer {
+        height: 800px;
+      }
+
+      .sticky {
+        padding: 12px;
+        font-weight: bold;
+      }
+
+      .case1 .sticky {
+        position: sticky;
+        background: yellow;
+      }
+      .case2 {
+        height: 300px;
+        overflow: auto;
+      }
+
+      .case2 .sticky {
+        position: sticky;
+        top: 0;
+        background: greenyellow;
+      }
+
+      .case3 {
+        height: 80px;
+      }
+
+      .case3 .sticky {
+        position: sticky;
+        top: 0;
+        background: skyblue;
+      }
+
+      .case4 .sticky {
+        position: sticky;
+        top: 0;
+        background: tomato;
+        z-index: 10;
+      }
+    </style>
+
+    <section class="case1">
+      <h2>CASE 1 ❌ top 없음</h2>
+      <div class="sticky">sticky (top 없음)</div>
+      <div class="spacer"></div>
+    </section>
+
+    <section class="case2">
+      <h2>CASE 2 ⚠️ 부모 overflow (부모 기준으로만 동작)</h2>
+      <div class="sticky">sticky (부모 overflow)</div>
+      <div class="spacer"></div>
+    </section>
+
+    <section class="case3">
+      <h2>CASE 3 ❌ 부모 높이 부족</h2>
+      <div class="sticky">sticky (부모가 너무 짧음)</div>
+    </section>
+
+    <section class="case4">
+      <h2>CASE 4 ✅ 정상 동작 (viewport 기준)</h2>
+      <div class="sticky">sticky (정상 동작)</div>
+      <div class="spacer"></div>
+    </section>
+  </body>
+</html>
