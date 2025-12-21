@@ -4,3 +4,4 @@
 - z-index가 동작하는 구조, 동작하지 않는 구조를 만들어 비교
 - 부모 요소의 transform로 인한 fixed 깨짐 구현
 - sticky 실패 조건 3가지 구현
+- header, dropdown, modal 동시구현

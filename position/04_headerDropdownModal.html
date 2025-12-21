@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fixed 헤더 + 드롭다운 + 모달</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding-top: 60px;
+        font-family: Arial;
+      }
+
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: #222;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 100;
+      }
+
+      .nav {
+        position: relative;
+        margin-left: 20px;
+        cursor: pointer;
+      }
+
+      .dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        color: black;
+        padding: 10px;
+        display: none;
+        z-index: 200;
+      }
+
+      .nav:hover .dropdown {
+        display: block;
+      }
+
+      .content {
+        height: 200vh;
+        padding: 20px;
+      }
+
+      .modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+      }
+
+      .modal-box {
+        background: white;
+        padding: 40px;
+      }
+    </style>
+
+    <div class="header">
+      Fixed Header
+      <div class="nav">
+        Menu
+        <div class="dropdown">Dropdown</div>
+      </div>
+    </div>
+
+    <div class="content">스크롤하면서 헤더가 고정되는지 확인</div>
+
+    <div class="modal">
+      <div class="modal-box">Modal</div>
+    </div>
+  </body>
+</html>
